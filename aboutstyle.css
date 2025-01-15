@@ -1,0 +1,121 @@
+/* Reset margin and padding to ensure no space on edges */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #5fc2ee;
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title {
+    color: #1C1C1C;
+    font-size: 30px;
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.title h1 {
+    margin: 0;
+    font-weight: bold;
+    margin-right: 72px;
+    font-size: 40px;
+}
+
+.about-link {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 40px;
+    transition: color 0.3s ease-in-out;
+}
+
+.about-link:hover {
+    color: #ffffff;
+}
+
+.imageTable1 {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.td {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: relative;
+    vertical-align: top;
+}
+
+/* Image 1 */
+.p1 {
+    width: 50%; /* Adjust the width to take full width of the td */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Ensure it stays under the second image */
+    transition: opacity 0.5s ease-in-out;
+    padding-right: 500px;
+}
+
+/* Image 2 (overlayed) */
+.p2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    width: 50%; /* Same width as p1 */
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    padding-right: 500px;
+}
+
+/* Show the second image when hovering */
+.td:hover .p1 {
+    opacity: 0; /* Hide the first image */
+}
+
+.td:hover .p2 {
+    opacity: 1; /* Show the second image */
+}
+
+/* Text cell adjustments */
+.text-cell {
+    padding-left: 350px;
+    padding-right: 20px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: left; /* Change text alignment to left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left side */
+}
+
+.text-cell h2 {
+    margin-top: 0;
+}
+
+.text-cell p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1C1C1C;
+    max-width: 80%;
+    margin: 0;
+}
